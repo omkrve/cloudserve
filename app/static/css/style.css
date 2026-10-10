@@ -1,0 +1,153 @@
+
+:root {
+    font-family: Inter, "Segoe UI", sans-serif;
+    color: #182b45;
+    background: #f5f7fb;
+}
+body { margin: 0; background: #f5f7fb; }
+.app-shell { min-height: 100vh; display: flex; }
+.sidebar {
+    width: 235px; flex-shrink: 0; background: #12243c; color: white;
+    padding: 28px 18px; position: relative;
+}
+.brand { font-size: 21px; font-weight: 750; display: flex; align-items: center; gap: 10px; }
+.brand-mark {
+    display: grid; place-items: center; background: #4e83f5;
+    border-radius: 10px; width: 36px; height: 36px;
+}
+.nav-label, .eyebrow {
+    font-size: 10px; font-weight: 750; letter-spacing: 1.4px;
+    color: #8c9bb1;
+}
+.nav-label { margin: 48px 10px 12px; }
+.nav-item {
+    display: block; color: #b7c4d6; text-decoration: none;
+    padding: 12px; border-radius: 9px; margin: 5px 0; font-size: 14px;
+}
+.nav-item.active { color: white; background: #293e5b; }
+.sidebar-footer {
+    position: absolute; bottom: 28px; font-size: 10px;
+    letter-spacing: 1px; color: #9baac0; line-height: 2;
+}
+.sidebar-footer span { letter-spacing: 0; font-size: 12px; }
+.main-content { flex: 1; min-width: 0; padding: 30px 4%; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+h1 { font-size: 27px; font-weight: 750; margin: 4px 0 20px; }
+.status-pill, .ticket-status, .count {
+    display: inline-block; border-radius: 20px; padding: 7px 11px;
+    font-size: 11px; background: white; border: 1px solid #e3e9f2;
+}
+.status-pill span {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: #21a675; margin-right: 5px;
+}
+.welcome {
+    display: flex; justify-content: space-between; align-items: center;
+    background: #e9f0ff; border: 1px solid #dbe6ff;
+    padding: 28px 30px; border-radius: 15px; margin: 10px 0 20px;
+}
+.welcome h2 { font-size: 25px; line-height: 1.35; font-weight: 750; }
+.welcome .eyebrow { color: #3866bd; }
+.muted, .panel-heading p { color: #78869b; font-size: 12px; margin-bottom: 0; }
+.welcome-icon { font-size: 60px; color: #487df0; padding-right: 15px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+.stat-card, .panel {
+    background: white; border: 1px solid #e7ebf2; border-radius: 13px;
+}
+.stat-card { padding: 18px; }
+.stat-card p { font-size: 12px; color: #687890; margin-bottom: 12px; }
+.stat-card h3 { font-size: 27px; font-weight: 750; margin: 0 0 7px; }
+.stat-card span { font-size: 11px; color: #8a96a8; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(270px, 1fr); gap: 18px; }
+.panel { min-width: 0; padding: 20px; }
+.panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
+.panel-heading h3 { font-size: 16px; font-weight: 750; margin-bottom: 5px; }
+.table { font-size: 12px; }
+.table thead th { font-size: 10px; color: #8390a3; font-weight: 650; }
+.table td { padding-top: 15px; padding-bottom: 15px; }
+.table td strong { font-size: 11px; }
+.priority { font-size: 11px; }
+.ticket-status { background: #edf7f1; color: #24764d; padding: 5px 8px; }
+.empty-state { text-align: center; padding: 35px 8px; }
+.empty-icon { font-size: 28px; color: #7895c6; }
+.empty-state h4 { font-size: 15px; margin-top: 12px; }
+.empty-state p { color: #8390a3; font-size: 12px; }
+.form-panel form { display: flex; flex-direction: column; gap: 9px; }
+.form-panel label { font-size: 12px; font-weight: 650; margin-top: 4px; }
+.form-panel input, .form-panel select, .form-panel textarea {
+    border: 1px solid #dfe5ee; border-radius: 7px; padding: 10px;
+    font: inherit; font-size: 12px; background: white; width: 100%;
+}
+.primary-button {
+    border: 0; border-radius: 8px; padding: 12px;
+    color: white; background: #3269df; font-weight: 650; margin-top: 7px;
+}
+.primary-button:hover { background: #2455bf; }
+footer { color: #96a0af; font-size: 11px; padding: 25px 0 5px; }
+@media (max-width: 1050px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .content-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+    .sidebar { width: 65px; padding: 20px 8px; overflow: hidden; }
+    .brand { font-size: 0; }
+    .nav-label, .sidebar-footer { display: none; }
+    .nav-item { font-size: 0; text-align: center; }
+    .main-content { padding: 20px 12px; }
+    .welcome { padding: 20px; }
+    .welcome h2 { font-size: 21px; }
+    .welcome-icon { display: none; }
+    .status-pill { font-size: 0; }
+}
+
+
+.auth-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: #f5f7fb;
+}
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: white;
+    border: 1px solid #e7ebf2;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 18px 60px rgba(18, 36, 60, 0.07);
+}
+.auth-card h1 { font-size: 27px; margin: 12px 0; }
+.auth-brand { color: #12243c; }
+.auth-card form { display: flex; flex-direction: column; gap: 10px; }
+.auth-card label { font-size: 12px; font-weight: 650; margin-top: 8px; }
+.auth-card input {
+    width: 100%;
+    border: 1px solid #dfe5ee;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+}
+.auth-switch { margin: 22px 0 0; font-size: 13px; text-align: center; }
+.auth-switch a { color: #3269df; font-weight: 650; }
+
+
+.account-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 12px;
+}
+.account-info span { color: #78869b; }
+.logout-button {
+    background: white;
+    border: 1px solid #dfe5ee;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+}
