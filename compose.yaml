@@ -1,0 +1,14 @@
+services:
+  cloudserve:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in your environment}
+    volumes:
+      - cloudserve_data:/app/instance
+    restart: unless-stopped
+
+volumes:
+  cloudserve_data:
